@@ -1,0 +1,6 @@
+2025-03-02T12:47:12+00:00 AllenYGY.local#01 I: Start test test suite for Xor:0:A is True, B is True, A Xor B is False.
+2025-03-02T12:47:12+00:00 AllenYGY.local#01 I: Test test suite for Xor:0:A is True, B is True, A Xor B is False is successful.
+2025-03-02T12:47:12+00:00 AllenYGY.local#01 I: End test test suite for Xor:0:A is True, B is True, A Xor B is False.
+2025-03-02T12:47:12+00:00 AllenYGY.local#01 I: Start test test suite for Xor:2:A is False, B is True, A Xor B is True.
+2025-03-02T12:47:12+00:00 AllenYGY.local#01 I: Test test suite for Xor:2:A is False, B is True, A Xor B is True is successful.
+2025-03-02T12:47:12+00:00 AllenYGY.local#01 I: End test test suite for Xor:2:A is False, B is True, A Xor B is True.
