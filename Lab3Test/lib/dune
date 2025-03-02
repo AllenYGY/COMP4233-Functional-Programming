@@ -1,0 +1,3 @@
+(library
+ (name lab3xor)           ; 内部库名称，用于 dune 的依赖，例如 `(libraries lab3xor)`
+ (modules Lab_3_Xor))     ; 明确库中包含哪些 .ml 文件

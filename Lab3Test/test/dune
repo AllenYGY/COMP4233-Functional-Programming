@@ -1,0 +1,3 @@
+(test
+ (name Lab_3_Test) ; 测试目标的名称 Target Test file name
+ (libraries lab3xor ounit2)) ;  # Test dependencies lab3xor and test framework ounit2

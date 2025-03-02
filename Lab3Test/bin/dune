@@ -1,0 +1,4 @@
+(executable
+ (name main)
+ (public_name Lab3Test)
+ (libraries lab3xor ounit2))

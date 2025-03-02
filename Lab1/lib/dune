@@ -1,0 +1,3 @@
+(library
+ (name sum_lib)
+(modules sum))
