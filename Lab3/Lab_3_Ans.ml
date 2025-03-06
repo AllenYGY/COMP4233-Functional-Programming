@@ -5,7 +5,7 @@ let rec sub a b=
 
 
 (* Question 3 *)
-let fib n =
+let fib_fast n =
   let arr = Array.make (n + 1) 1 in
   for i = 2 to n do
     arr.(i) <- arr.(i-1) + arr.(i-2);
