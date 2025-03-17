@@ -42,5 +42,4 @@ let ( +.+ ) x y =
   match x, y with
   | Int a, Int b -> Int (a + b)
   | Float a, Float b -> Float (a +. b)
-  | Int a, Float b -> raise TypeError
-  | Float a, Int b -> raise TypeError;;
+  | _ -> raise TypeError;;

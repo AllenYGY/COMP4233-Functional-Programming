@@ -1,8 +1,11 @@
-let rec reverse lst =
+let rec reverse_tail lst acc  =
   match lst with
-  | [] -> []
-  | [x] -> [x]
-  | x :: lst -> (reverse lst) @ [x];;
+  | [] -> acc
+  | x :: lst -> reverse_tail lst (x::acc) ;;
+
+let reverse lst = reverse_tail lst [];;
+
+(*this reverse function is a tail recursive function, since the recursive call is the last operation in the function.*)
 
 type 'a under = E | S of 'a | P of 'a under * 'a under;;
 
