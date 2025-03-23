@@ -13,7 +13,6 @@ let rec fold f ini = function
   | [] -> ini 
   | h :: t -> f h (fold f ini t);;
 
-(* Question 2*)
 let rec zero = function
   | [] -> []
   | s::t -> 0::zero t;;
@@ -28,6 +27,7 @@ let ll_sum llst =
   | [] -> []
   | h::t -> ll_sum_1 t h;;
 
+(* Question 2*)
 let rec bi_filter f lst1 lst2 = 
   match lst1, lst2 with
   | [], [] -> []
