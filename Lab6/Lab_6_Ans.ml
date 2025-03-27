@@ -15,7 +15,7 @@ let rec fold f ini = function
 
 let rec zero = function
   | [] -> []
-  | s::t -> 0::zero t;;
+  | _::t -> 0::zero t;;
 
 let rec ll_sum_1 llst acc  =
   match llst with 
