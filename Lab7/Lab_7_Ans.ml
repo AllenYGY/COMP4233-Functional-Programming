@@ -40,8 +40,8 @@ type 'a array = 'a ary_element list;;
 exception Negative_Index;;
 exception Exceed_Length;;
 
-let ( |~ ) (a:'a array) i = a @ [ {  value = i } ];;
-  
+let ( |~ ) (a:'a array) i : 'a array = a @ [ {  value = i } ];;
+
 let rec helpfun (a:'a array) i cnt=
     if i < 0 then raise Negative_Index
     else if cnt < i then 
@@ -61,4 +61,3 @@ let ( |. ) (a:'a array) i =
 let ( <~ ) ((a: 'a array), (n: int)) (v: 'a) : unit =
   let ele = helpfun a n 0 in
   ele.value <- v;;
-
