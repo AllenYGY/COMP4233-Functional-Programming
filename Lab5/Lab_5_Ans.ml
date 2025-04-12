@@ -33,7 +33,7 @@ let split (n:int) =
   else (Pos, n);;
 
 type int_or_float =
-  | Int of int      
+   Int of int     | 
   | Float of float  
 
 exception TypeError;;
