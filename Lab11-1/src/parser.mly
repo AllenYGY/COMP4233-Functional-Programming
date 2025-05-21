@@ -10,7 +10,7 @@
 %left PLUS
 %left TIMES
 
-%start <expr> prog
+%start <Ast.expr> prog
 %type <Ast.expr> expr
 %%
 

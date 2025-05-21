@@ -14,7 +14,6 @@ let step_binop = function
   | (Mult, Int a, Int b) -> Int (a * b)
   | _ -> failwith "Unexpected in step_binop"
 
-
 let rec step: expr -> expr = function
   | Int _ -> failwith "Does not step"
   | Binop (bop, e1,e2) ->
