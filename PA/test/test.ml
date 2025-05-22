@@ -12,6 +12,12 @@ let parse_s name i s =
 let evalu_i name i s =
   name >:: (fun _ -> assert_equal (string_of_int i) (interp s))
 
+let evalu_b name i s =
+  name >:: (fun _ -> assert_equal (string_of_bool i) (interp s))
+
+let evalu_list name expected s =
+  name >:: (fun _ -> assert_equal expected (interp s))
+
 let tests = [
   parse_i "Parse1 int 22" (Int 22) "22";
   parse_i "Parse2 int -1" (Int (-1)) "-1";
@@ -24,6 +30,8 @@ let tests = [
   evalu_i "Evalu3 int 2*3" (6) "2*3";
   evalu_i "Evalu4 int 2*3+5" (11) "2*3+5";
   evalu_i "Evalu5 let x = 1 in x" (1) "let x = 1 in x";
+  evalu_b "Evalu6 let x = (fun a -> (if (a<=1) then true else false)) in (x 1)" (true) "let x = (fun a -> (if (a<=1) then true else false)) in (x 1)";
+  evalu_list "List test" "[true]" "let x = (fun a -> (if (a<=1) then true else false)) in ((x 1)::[])";
 ]
 
 let _ = run_test_tt_main ("suite" >::: tests)

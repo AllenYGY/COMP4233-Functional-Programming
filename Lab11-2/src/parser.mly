@@ -24,7 +24,7 @@ expr:
     | e1 = expr; TIMES; e2 = expr {
         Binop(Mult, e1, e2)}
     | LPAREN; e = expr; RPAREN {e}
-    | LET; e0 = ID; EQ; e1 = expr; IN; e2 = expr { 
+    | LET; e0=ID; EQ; e1 = expr; IN; e2 = expr { 
         Let(e0, e1, e2)}
     | i = INT {Int i}
     | i = ID {Id i};
